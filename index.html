@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Coffee Company</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="./img/logo.png" alt="logo"></a>
+            <div class="toggle" onclick="togglemenu();"></div>
+            <ul class="navigation" onclick="togglemenu();">
+                <li><a href=" #">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Nuevo</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </header>
+        <main>
+            <div class="content">
+                <div class="textbox">
+                    <h2>Esto no es solo un Café, <br>Es <span>STARBUCKS.</span></h2>
+                    <p class="resumen">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet totam nemo sed
+                        fuga deleniti
+                        quibusd am ab quis animi dolor, praesentium, sequi, nisi aut dolore earum odit vero omnis
+                        cupiditate quisquam.
+                        A tenetur excepturi laboriosam fuga voluptatem dignissimos sapiente aliquid, eum commodi atque
+                        ratione dicta ad! Excepturi, ullam voluptate animi tempora, quidem placeat autem quas ut nihil
+                        aliquam, nisi architecto debitis?</p>
+                    <a href="#" class="btn">Leer Más</a>
+                </div>
+                <div class="imgbox">
+                    <picture>
+                        <img src="./img/img1.png" class="starbucks" alt="starbucks">
+                    </picture>
+                </div>
+                <div class="content-ul">
+                    <ul class="slider-bucks">
+                        <li><img src="./img/thumb1.png"
+                                onclick="imgslider('./img/img1.png');changecirclecolor('#037144')" alt="starbucks"></li>
+                        <li><img src="./img/thumb2.png"
+                                onclick="imgslider('./img/img2.png');changecirclecolor('#eb7399')" alt="starbucks"></li>
+                        <li><img src="./img/thumb3.png"
+                                onclick="imgslider('./img/img3.png');changecirclecolor('#cb4ca7')" alt="starbucks"></li>
+                    </ul>
+                    <ul class="sci">
+                        <li><a href="#"><img src="./img/facebook.png" alt="logo-facebook"></a></li>
+                        <li><a href="#"><img src="./img/twitter.png" alt="logo-twitter"></a></li>
+                        <li><a href="#"><img src="./img/instagram.png" alt="logo-instagram"></a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </main>
+    </section>
+
+    <script type="text/javascript">
+        function imgslider(anything) {
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changecirclecolor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+        function togglemenu() {
+            var menutoggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menutoggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+
+
+
+
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>
